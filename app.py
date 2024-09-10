@@ -20,7 +20,7 @@ genre = st.text_input("Enter your idea")
 if genre:
     # Set the URL and API key
     url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent'
-    api_key = 'AIzaSyAMWZEcYcMFCeBaqMVlQ9hWpF8god-rmzw'
+    api_key = st.secrets["api"]["key"]
 
     # Set the headers
     headers = {
@@ -159,13 +159,13 @@ if genre:
     import requests
 
 # Your bot token
-    TOKEN = '7410673758:AAGrow391TPhltONkLzZzY3RQKAW17aSZbw'
+    TOKEN = st.secrets["api"]["secret"]
 
 # Telegram API URL to send video
     url = f"https://api.telegram.org/bot{TOKEN}/sendVideo"
     
     # Chat ID where the video will be sent (user ID or group ID)
-    chat_id = '905324007'
+    chat_id = st.secrets["api"]["tel_id"]
     
     # Path to your video file
     video_file = '/content/2.mp4'
