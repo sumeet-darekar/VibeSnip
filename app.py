@@ -59,7 +59,7 @@ if genre:
     # Define a function to resize images
     def resize_image(image, width, height):
         """Resize an image to the specified width and height."""
-        return image.resize((width, height), Image.ANTIALIAS)
+        return image.resize((width, height), Image.LANCZOS)
 
     # Load and resize images
     image1 = Image.open('minecraft.jpg')
